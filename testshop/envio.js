@@ -8,8 +8,16 @@ document.querySelector("#submit").addEventListener("click", e => {
   let ENombre = document.querySelector("#nombre").value;
   let EApellido = document.querySelector("#apellido").value;
   let EEmail = document.querySelector("#email").value;
- // let empleado = document.querySelector("#empleado").value;
- // let servicio = document.querySelector("#servicio").value;
+  let price = document.querySelector('#cart-details').textContent
+      let hola = price.replace(/ProductoPrecioCantSub Total/g,' ')
+	    let hola2 = hola.replace(/-/g,'  Cantidad: ')   
+	      var hola3 = hola2.replace(/Remove/g,'  --- ');
+		var buscar="S/" 
+		 var hola4=hola3.replace(new RegExp(buscar,"g") ," S/");
+	
+	
+	
+	
   let resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
@@ -23,7 +31,9 @@ document.querySelector("#submit").addEventListener("click", e => {
 		*Apellidos:*%0A
 		${EApellido}%0A
 		*Email:*%0A
-		${EEmail}`;
+		${EEmail}
+		*Todo:*%0A
+		${hola4}`;
 
   if (ENombre === "" || EApellido === "" || EEmail === "") {
     resp.classList.add("fail");
