@@ -24,16 +24,12 @@ document.querySelector("#submit").addEventListener("click", e => {
   resp.classList.remove("send");
 
   let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
-		*_MI NEGOCIO_*%0A
-		*Reservas*%0A%0A
-		*Nombres:*%0A
-		${ENombre}%0A
-		*Apellidos:*%0A
-		${EApellido}%0A
-		*Email:*%0A
-		${EEmail}
-		*Todo:*%0A
-		${hola4}`;
+		*_Formulario de Contacto_*%0A
+-----------------------------%0A%0A
+Hola,' + name + ' ' + lastname + '%0A
+Tu Email para contacto es:%0A
+' + email + '%0A-------------------------------%0A%0A
+*_Tu Lista de Pedido_*%0A' + hola4 + '`;
 
   if (ENombre === "" || EApellido === "" || EEmail === "") {
     resp.classList.add("fail");
