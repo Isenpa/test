@@ -10,7 +10,7 @@ document.querySelector("#submit").addEventListener("click", e => {
   let EEmail = document.querySelector("#email").value;
  // let empleado = document.querySelector("#empleado").value;
  // let servicio = document.querySelector("#servicio").value;
- // let resp = document.querySelector("#respuesta");
+  let resp = document.querySelector("#respuesta");
 
   resp.classList.remove("fail");
   resp.classList.remove("send");
