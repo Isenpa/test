@@ -24,9 +24,9 @@ document.querySelector("#submit").addEventListener("click", e => {
   resp.classList.remove("send");
 
   let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
-		*_Formulario de Pedido*%0A
+		*_Formulario de Pedido_*%0A
 -----------------------------%0A%0A
-Hola, ${ENombre}  ${EApellido}%0A
+*Hola*, ${ENombre}  ${EApellido}%0A
 Tu Email para contacto es:%0A
 ${EEmail}%0A-------------------------------%0A%0A
 *_Tu Lista de Pedido_*%0A${hola4}`;
